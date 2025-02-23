@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Chat Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login/Signup Popup -->
+  <div id="auth-popup" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to Live Chat</h2>
+      <p>Connect with friends and colleagues in real-time. Login or signup to get started!</p>
+      <div id="login-form">
+        <h3>Login</h3>
+        <input type="email" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button id="login-submit">Login</button>
+        <p>Don't have an account? <a href="#" id="show-signup">Signup</a></p>
+      </div>
+      <div id="signup-form" style="display: none;">
+        <h3>Signup</h3>
+        <input type="text" id="signup-firstname" placeholder="First Name" />
+        <input type="text" id="signup-lastname" placeholder="Last Name" />
+        <input type="email" id="signup-email" placeholder="Email" />
+        <input type="password" id="signup-password" placeholder="Password" />
+        <input type="password" id="signup-confirm-password" placeholder="Confirm Password" />
+        <button id="signup-submit">Signup</button>
+        <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container" style="display: none;">
+    <!-- Sidebar for active users -->
+    <div class="sidebar">
+      <h2>Active Users</h2>
+      <ul id="user-list"></ul>
+    </div>
+
+    <!-- Main chat area -->
+    <div class="chat-window">
+      <div id="chat-messages" class="messages"></div>
+      <div class="input-area">
+        <select id="recipient-select">
+          <option value="all">Everyone</option>
+        </select>
+        <input type="text" id="message-input" placeholder="Type a message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
